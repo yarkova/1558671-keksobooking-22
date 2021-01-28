@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Мария Яркова](https://up.htmlacademy.ru/javascript/22/user/1558671).
-* Наставник: `Неизвестно`.
+* Наставник: * Наставник: [Руслан Бреев](https://htmlacademy.ru/profile/blckwltz).
 
 ---
 
