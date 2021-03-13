@@ -20,4 +20,4 @@ function getRandomFloat(min, max, hundredth) {
 }
 getRandomFloat(1.1, 1.2, 3);
 
-import {getRandomInt, getRandomFloat};
+export {getRandomInt, getRandomFloat};
