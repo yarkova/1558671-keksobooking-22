@@ -29,11 +29,28 @@ function fillPopup(data) {
   typeElement.textcontent = Type[data.offer.type];
   capacityElement.textContent = `${data.offer.rooms} комнаты для ${data.offer.guests} гостей`;
   timeElement.textContent = `Заезд после ${data.offer.checkin} выезд до ${data.offer.checkout}`;
-  featuresElement.innerHTML = data.offer.features;
-  descriptionElement.textContent = data.offer.description;
-  photosElement.innerHTML = data.offer.photos;
-  avatarElement.src = data.author.avatar;
+  featuresElement.innerHTML = '';
 
+  if (data.offer.features.length) {
+    for (let i = 0; i < data.offer.features.length; i++) {
+      const featureElement = document.createElement('li');
+      featureElement.classList.add('popup__feature', `popup__feature--${data.offer.features[i]}`);
+      featuresElement.appendChild(featureElement);
+    }
+  }
+
+  descriptionElement.textContent = data.offer.description;
+  photosElement.innerHTML = '';
+
+  if (data.offer.photos.length){
+    for (let i = 0; i < data.offer.photos.length; i++){
+      const photoElement = document.createElement('img');
+      photoElement.src = data.offer.photos[i];
+      photosElement.appendChild(photoElement);
+    }
+  }
+
+  avatarElement.src = data.author.avatar;
 
 
   console.log(popupClone);
